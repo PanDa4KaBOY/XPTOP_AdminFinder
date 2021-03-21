@@ -22,25 +22,6 @@ colors=( "${bd}${r}" "${bd}${g}" "${bd}${y}" "${bd}${b}" "${bd}${p}" "${bd}${c}"
 thread=10
 count=1
 
-check(){
-	command -v tput > /dev/null 2>&1 ||
-		{
-			apt install ncurses-util ||
-				{
-					echo -e "Please check your connecting!";
-					exit;
-				}
-		}
-	command -v curl > /dev/null 2>&1 ||
-		{
-
-			apt install curl > /dev/null 2>&1 ||
-				{
-					echo -e "Please check your connecting!";
-					exit;
-				}
-		}
-}
 exits() {
 	checkphp=$(ps aux | grep -o "curl" | head -n1)
 
@@ -72,11 +53,10 @@ banner() {
 	echo -e "\t${colors[rand1]} |     | . |     | |   |${colors[rand2]}  |   __| |   | . | -_|  _|"${n}
 	echo -e "\t${colors[rand1]} |__|__|___|_|_|_|_|_|_|${colors[rand2]}  |__|  |_|_|_|___|___|_|"${n}
 	echo -e "\t${sss}${n}"
-	echo -e "\t${bd}${g}|${w}       Author  ${b}:${c} ${ul}4K17${n}                           ${g}|${n}"
+	echo -e "\t${bd}${g}|${w}       Author  ${b}:${c} ${ul}XP TOP${n}                           ${g}|${n}"
 	echo -e "\t${bd}${g}|${w}       Code    ${b}:${w} Bash                           ${g}|${n}"
-	echo -e "\t${bd}${g}|${w}       Team    ${b}:${w} IndoSec, Black coder crush     ${g}|${n}"
-	echo -e "\t${bd}${g}|${w}       Date    ${b}:${w} 13 - 5 - 2019                  ${g}|${n}"
-	echo -e "\t${bd}${g}|${w}       Version ${b}:${w} 1.0                            ${g}|${n}"
+	echo -e "\t${bd}${g}|${w}       Date    ${b}:${w} 22 - 03 - 2021                  ${g}|${n}"
+	echo -e "\t${bd}${g}|${w}       Version ${b}:${w} 1.1                            ${g}|${n}"
 	echo -e "\t${sss}${n}"
 }
 
